@@ -2,7 +2,7 @@ package Ch05_For;
 
 import java.util.Scanner;
 
-public class Ch04_For05 {
+public class Ch05_For05 {
 
 	public static void main(String[] args) {
 		/*

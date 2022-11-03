@@ -2,7 +2,7 @@ package Ch06_While_Break_Continue;
 
 import java.util.Scanner;
 
-public class Ch04_WhileEX02 {
+public class Ch06_WhileEX02 {
 
 	public static void main(String[] args) {
 		// =============== 중간에 if문 쓰기

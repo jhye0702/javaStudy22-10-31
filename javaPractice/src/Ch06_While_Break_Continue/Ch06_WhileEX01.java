@@ -2,7 +2,7 @@ package Ch06_While_Break_Continue;
 
 import java.util.Scanner;
 
-public class Ch04_WhileEX01 {
+public class Ch06_WhileEX01 {
 
 	public static void main(String[] args) {
 		/*

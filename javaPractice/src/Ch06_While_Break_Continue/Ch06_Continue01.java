@@ -1,6 +1,6 @@
 package Ch06_While_Break_Continue;
 
-public class Ch04_Continue01 {
+public class Ch06_Continue01 {
 
 	public static void main(String[] args) {
 		/*
