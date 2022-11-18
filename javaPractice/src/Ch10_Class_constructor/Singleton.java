@@ -18,7 +18,9 @@ public class Singleton {
 	*/
 	
 	private static Singleton singleton = new Singleton(); 
-	// static이 붙어야 하는 이유? => 
+	// static이 붙어야 하는 이유? =>
+	// static으로 singleton이 고정값으로 올라갔는데
+	// 
 	
 	private Singleton() {}
 	
