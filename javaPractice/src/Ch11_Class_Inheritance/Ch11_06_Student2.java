@@ -27,7 +27,7 @@ class Leader extends Student2 {
 }
 
 
-public class Ch11_06 {
+public class Ch11_06_Student2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

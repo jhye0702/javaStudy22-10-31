@@ -17,7 +17,7 @@ class CaptionTv extends Tv{
 	}
 }
 
-public class Ch11_03 {
+public class Ch11_03_Tv {
 
 	public static void main(String[] args) {
 		CaptionTv ctv = new CaptionTv();

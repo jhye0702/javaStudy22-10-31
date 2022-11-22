@@ -20,7 +20,7 @@ class MyChild extends MyParent {
 	
 }
 
-public class Ch11_07 {
+public class Ch11_07_MyParent {
 
 	public static void main(String[] args) {
 		MyChild c = new MyChild();

@@ -12,7 +12,7 @@ class Child extends Parent {
 	}
 }
 
-public class Ch11_04 {
+public class Ch11_04_Parent {
 
 	public static void main(String[] args) {
 		Child c = new Child();
