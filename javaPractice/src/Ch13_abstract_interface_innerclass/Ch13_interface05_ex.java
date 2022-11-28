@@ -1,5 +1,7 @@
 package Ch13_abstract_interface_innerclass;
 
+import java.util.Iterator;
+
 /*
  * 주어진 코드를 바탕으로 이전 문제에서 만든 MyWeapon을 사용하는
  * GameUnit 클래스의 생성자와 attack() 메서드를 완성하라
@@ -30,6 +32,7 @@ class GameUnit  {
 		System.out.println("현재 bossPower : " + GameUnit.bossPower );
 		if(GameUnit.bossPower < 0) {
 			System.exit(1);
+			
 		}
 	}
 }
