@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 /*
  * HttpServlet 추상 클래스와 LoginServlet, FileDownloadServlet 클래스가 있습니다.

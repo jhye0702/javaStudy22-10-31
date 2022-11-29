@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 abstract class Animal {	// 동물 클래스
 	private String name;	// 이름

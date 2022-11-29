@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 /*
  * A 프로그래머와 B 프로그래머가 하나의 프로젝트를 진행했을 때,

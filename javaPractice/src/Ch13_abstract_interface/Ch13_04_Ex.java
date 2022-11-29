@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 import java.util.ArrayList;
 

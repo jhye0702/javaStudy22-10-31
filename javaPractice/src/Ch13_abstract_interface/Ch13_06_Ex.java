@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 abstract class Student {
 	public String name;		// ¿Ã∏ß

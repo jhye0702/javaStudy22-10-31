@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 /* 추상 메서드는 선언부만 정의하고 구체적인 내용은 비워놓은 메서드 
  * 구체적인 내용을 적지 않았기 때문에 이를 상속받은 하위 클래스에서는 사용하려면 반드시 구현하라는 의미

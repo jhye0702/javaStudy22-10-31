@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 interface Player {	// 플레이어 인터페이스
 	void play();	// 재생

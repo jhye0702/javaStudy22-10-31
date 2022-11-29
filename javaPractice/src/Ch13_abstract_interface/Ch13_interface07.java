@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 // 인터페이스 상수 사용 예
 interface Skinnable {

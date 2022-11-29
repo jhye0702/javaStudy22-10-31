@@ -1,4 +1,4 @@
-package Ch13_abstract_interface_innerclass;
+package Ch13_abstract_interface;
 
 /*
  * 정수형 필드 num1, num2 가 있다.
