@@ -1,0 +1,24 @@
+java.lang.ArithmeticException: / by zero
+	at Ch15_exeption.Ch15_12.main(Ch15_12.java:24)
+예외메시지 : / by zero
+-------------------------------------------
+
+예외 발생시간 : Thu Dec 01 10:47:54 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at Ch15_exeption.Ch15_12.main(Ch15_12.java:25)
+예외메시지 : / by zero
+-------------------------------------------
+-------------------------------------------
+
+예외 발생시간 : Thu Dec 01 10:48:05 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at Ch15_exeption.Ch15_12.main(Ch15_12.java:25)
+예외메시지 : / by zero
+-------------------------------------------
+-------------------------------------------
+
+예외 발생시간 : Thu Dec 01 10:48:13 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at Ch15_exeption.Ch15_12.main(Ch15_12.java:25)
+예외메시지 : / by zero
+-------------------------------------------
