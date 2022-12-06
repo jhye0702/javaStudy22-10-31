@@ -11,15 +11,14 @@ public class ShopCart {
 //	int productNum;
 //	int productCount;
 	public void selectProduct() {
-		do {
+		while(true) {
 			System.out.println("구매할 상품의 번호를 입력해 주십시오 >>> ");
 			int productNum = sc.nextInt();
 //			productNum = Integer.parseInt(sc.nextLine()); // 문자형으로 받은 걸 정수로 변형.....?
 			System.out.println("상품의 구매 개수를 입력해 주세요 >>> ");
 			int productCount = sc.nextInt();
 //			productCount = Integer.parseInt(sc.nextLine());  // 문자형으로 받은 걸 정수로 변형
-			MyProduct[cartCount++] = new Cart(productNum, productCount); 
-		} while(true);
+			MyProduct[cartCount++] = new Cart(productNum, productCount);
 //		System.out.println("상점에서 상품을 더 구매하시겠습니까?");
 //		System.out.println("더 구매를 원하시면 Y, 그만 쇼핑하실려면 N을 입력해 주십시요 >>> ");
 //		String selectMore = sc.next();		
@@ -49,7 +48,7 @@ public class ShopCart {
 //		else if(selectMore.equals("N") || selectMore.equals("n")) {
 //			return false;
 //		}
-//	}
+	}
 	
 	public void printCart() {
 		for(Cart choice : MyProduct) {

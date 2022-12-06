@@ -1,6 +1,6 @@
 package Ch16_package.object;
 
-public class Ch17_03 {
+public class Ch16_03_booleanEquals {
 	public static void main(String[] args) {
 		/* boolean equals(Object obj)
 		 * 두 인스턴스가 동일한지 여부를 반환.

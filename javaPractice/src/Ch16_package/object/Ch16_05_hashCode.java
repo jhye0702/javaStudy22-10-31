@@ -1,9 +1,9 @@
 package Ch16_package.object;
 
-public class Ch17_05 {
+public class Ch16_05_hashCode {
 	public static void main(String[] args) {
 		
-		/* int hashCod() : 
+		/* int hashCode() : 
 		 * 메모리에 생성된 인스턴스의 주소값을 가지고 일련 번호를 만들어 반환하는 메서드
 		 * equal(Object obj)의 판단 기준은 해시 코드 값이고 이 값은 hashCode()에서 가지고 옴.
 		 * 객체의 해시 코드 값을 반환

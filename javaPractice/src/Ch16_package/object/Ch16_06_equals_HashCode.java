@@ -31,7 +31,7 @@ class Student{
 	
 	
 }
-public class Ch17_06 {
+public class Ch16_06_equals_HashCode {
 
 	public static void main(String[] args) {
 		Student studentLee = new Student(100, "ÀÌ»ף¿ר");

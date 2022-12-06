@@ -7,7 +7,7 @@ class Comp {
 	}
 }
 
-public class Ch17_04 {
+public class Ch16_04_booleanEquals {
 
 	public static void main(String[] args) {
 		/* boolean equals(Object obj)

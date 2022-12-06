@@ -23,7 +23,7 @@ class Member {
 	
 }
 
-public class Ch16_02 {
+public class Ch16_02_toString {
 
 	public static void main(String[] args) {
 //		member의 데이터 타입은 클래스타입이지만 자동으로 println 에 들어오면서 문자열화가 됩니다.
