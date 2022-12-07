@@ -1,4 +1,4 @@
-package Ch17_;
+package Ch17_Generic;
 
 //GenericMethodTest
 // 제네릭 타입 메서드 : 메서드에 타입 매개변수를 사용하여 선언한 것

@@ -1,4 +1,4 @@
-package Ch17_;
+package Ch17_Generic;
 
 import java.util.ArrayList;
 

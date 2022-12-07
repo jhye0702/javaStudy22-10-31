@@ -1,4 +1,4 @@
-package Ch17_;
+package Ch17_Generic;
 
 class MyClass01 {
 	void sum (int a, int b) {

@@ -12,12 +12,13 @@ class Student{
 	public String toString() {
 		return studentId + ", " + studentName;
 	}
+	
 	//equals()메서드 재정의. 학번이 같으면 같은 학생으로 재정의
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Student) {	// 동일한 클래스의 객체이면
-			Student std = (Student)obj; // Student 클래스로 형 변환.
-			if(studentId == std.studentId) // 이 객체의 학번과 매개변수로 넘어온 객체의 학번이 같으면 true반환
+		if(obj instanceof Student) {		// 동일한 클래스의 객체이면
+			Student std = (Student)obj; 	// Student 클래스로 형 변환.
+			if(studentId == std.studentId) 	// 이 객체의 학번과 매개변수로 넘어온 객체의 학번이 같으면 true반환
 				return true;
 			else return false; 
 		}

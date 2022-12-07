@@ -1,4 +1,4 @@
-package Ch17_;
+package Ch17_Generic;
 
 // 제네릭은 C++ 의 템플릿이 발전한 형태
 // C++ 과는 달리 제네릭 대신 Object를 사용하면 모든 데이터 타입을 사용할 수 있지만,
