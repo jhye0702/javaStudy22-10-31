@@ -1,14 +1,23 @@
-package Ch19_disign_patton_school;
+package Ch19_disign_patton_school.copy;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManage {
-	static Scanner input = new Scanner(System.in);
-	static ArrayList<Student> students = new ArrayList();
-	static String[] className = {"JAVA", "PYTHON", "C"};
+
 	
-	static Student findStudentInform (int studentNumber) {
+	private ArrayList<Student> students;
+	private Scanner input;
+//	String[] className = {"JAVA", "PYTHON", "C"};
+	
+	public StudentManage() {
+		students = new ArrayList<Student>();
+		input = new Scanner(System.in);
+	}
+	
+	
+	
+	Student findStudentInform (int studentNumber) {
 		for (Student student : students) {
 			if (student.getStudentNumber() == studentNumber) {
 				System.out.println("해당 학생의 정보는 다음과 같습니다.");
@@ -18,14 +27,16 @@ public class StudentManage {
 				System.out.println();
 				return student;
 			}
-		} return null;
+		} 
+		return null;
 	}
 	
 // ========= 1. 학생 추가 및 수정 =========================================
 	
-	public static void addStudent() {
-		System.out.print("학생의 학번을 입력하세요. >>> ");
-		int studentNumber = input.nextInt(); // 학번 입력받음
+	public void addStudent() {
+//		System.out.print("학생의 학번을 입력하세요. >>> ");
+//		int studentNumber = input.nextInt(); // 학번 입력받음
+		int studentNumber = stn();
 		
 		// 입력한 학번으로 새로운 학생을 생성
 		Student newStudent = findStudentInform(studentNumber);
@@ -46,10 +57,11 @@ public class StudentManage {
 	}
 	
 // ========= 2. 학생 삭제 ==============================================
-	public static void removeStudent() {
+	public void removeStudent() {
 		
-		System.out.print("학생의 학번을 입력하세요 >>> ");
-		int studentNumber = input.nextInt(); // 학번 입력받음
+//		System.out.print("학생의 학번을 입력하세요 >>> ");
+//		int studentNumber = input.nextInt(); // 학번 입력받음
+		int studentNumber = stn();
 		Student newStudent = findStudentInform(studentNumber);
 		if(newStudent == null) { // 만약 기존에 학생의 정보가 없다면
 			System.out.println("Error : 학생이 존재하지 않습니다 !");
@@ -61,10 +73,13 @@ public class StudentManage {
 		System.out.println();
 		
 	}
+
+
 // ========= 3. 수강 신청 ==============================================
-	public static void addClass() {
-		System.out.print("학생의 학번을 입력하세요 >>> ");
-		int studentNumber = input.nextInt(); // 학번 입력받음
+	public void addClass() {
+//		System.out.print("학생의 학번을 입력하세요 >>> ");
+//		int studentNumber = input.nextInt(); // 학번 입력받음
+		int studentNumber = stn();
 		System.out.println();
 		
 		Student newStudent = findStudentInform(studentNumber);
@@ -73,6 +88,10 @@ public class StudentManage {
 			System.out.println();
 			return; // 메소드 종료
 		}
+//		if(className.length > newStudent.getClassCheck().length) {
+//			classadd.newStudent.setClassCheck(false);
+//		}
+//			String[] className
 		
 		while(true) {
 			System.out.println("메뉴를 선택하세요");
@@ -91,9 +110,13 @@ public class StudentManage {
 			System.out.println();
 		}
 	}
-	static void setClass(String message, Student newStudent, boolean check) {
+	public void setClass(String message, Student newStudent, boolean check) {
 		System.out.println(message);
-		System.out.print("1. JAVA / 2. PYTHON / 3. C >>> ");
+//		System.out.print("1. JAVA / 2. PYTHON / 3. C >>> ");
+		for (int i = 0; i < Student.getClassName().length; i++) {
+			System.out.print(i+1 + ". " + Student.getClassName()[i] + " / ");
+			}
+		System.out.print(" >>> ");
 		int index = input.nextInt()	- 1;
 		newStudent.setClassCheck(index, check); // 과목 수강 true / false 설정됨!
 		
@@ -113,10 +136,12 @@ public class StudentManage {
 //		}
 //	}
 
+
 	// ========= 4. 성적 입력 ==============================================
-	public static void setScore() {
-		System.out.print("학생의 학번을 입력하세요 >>> ");
-		int studentNumber = input.nextInt(); // 학번을 입력받음
+	public void setScore() {
+//		System.out.print("학생의 학번을 입력하세요 >>> ");
+//		int studentNumber = input.nextInt(); // 학번을 입력받음
+		int studentNumber = stn();
 		
 		Student newStudent = findStudentInform(studentNumber);
 		if(newStudent == null) { // 만약 기존에 학생의 정보가 없다면
@@ -126,13 +151,18 @@ public class StudentManage {
 		
 		while(true) {
 			System.out.println("성적을 입력/수정할 과목을 선택하세요.");
-			System.out.print("1. JAVA / 2.PYTHON / 3. C / 4. 종료 >>> ");
+//			System.out.print("1. JAVA / 2.PYTHON / 3. C / 4. 종료 >>> ");
+			for (int i = 0; i < Student.getClassName().length; i++) {
+				System.out.print(i+1 + ". " + Student.getClassName()[i] + " / ");
+				}
+			System.out.print((Student.getClassName().length+1) + ". 종료 >>> ");
+			
 			int classMenu = input.nextInt();
-			if(classMenu == 4) {	// 종료 선택시
+			if(classMenu == Student.getClassName().length+1) {	// 종료 선택시
 				break;				// while문 종료
 			}
 			if ( !newStudent.getClassCheck()[classMenu-1]) { // 미신청 선택시 // 인덱스번호이므로 번호-1 해주는거
-				System.out.println(className[classMenu-1] + "과목은 미 신청 과목입니다 !");
+				System.out.println(Student.getClassName()[classMenu-1] + "과목은 미 신청 과목입니다 !");
 				continue; // 미신청이기 때문에 while문 처음으로 돌아갑니다.
 			}
 			System.out.print("성적을 입력하세요 >>> ");
@@ -143,13 +173,13 @@ public class StudentManage {
 			}
 			// 정상적인 과목과 성적이 입력된 경우
 			newStudent.setClassScore(classMenu-1, score); // 해당 학생의 Score를 업데이트!
-			System.out.println(className[classMenu-1] + "성적 입력이 완료 되었습니다."); // 출력
+			System.out.println(Student.getClassName()[classMenu-1] + "성적 입력이 완료 되었습니다."); // 출력
 			
 		}
 		
 	}
 // ========= 5. 정보 조회 ===============================================
-	public static void informStudent() {
+	public void informStudent() {
 		System.out.println("메뉴를 선택해주세요.");
 		System.out.print("1. 특정 학생만 / 2. 전체 학생 >>> ");
 		int menu = input.nextInt();
@@ -164,45 +194,45 @@ public class StudentManage {
 		}
 	}
 
-	static void One() {
-		System.out.println("학생의 학번을 입력하세요");
-		int studentNumber = input.nextInt(); // 학번 입력받음
+	public void One() {
+//		System.out.println("학생의 학번을 입력하세요");
+//		int studentNumber = input.nextInt(); // 학번 입력받음
+		int studentNumber = stn();
 		
 		Student newStudent = findStudentInform(studentNumber);
 		if(newStudent == null) { // 만약 기존에 학생의 정보가 없다면
 			System.out.println("Error : 학생이 존재하지 않습니다 !");
 			return; // 메소드 종료
 		}
+		printStudentInform(newStudent);
 		
-		System.out.println("학번 : " + newStudent.getStudentNumber());
-		System.out.println("이름 : " + newStudent.getName());
-		System.out.println("전화번호 : " + newStudent.getPhoneNumber());
-		System.out.println("메모 : " + newStudent.getMemo());
-		System.out.println("현재 수강중인 과목과 성적 >>> ");
-		boolean[] classCheck = newStudent.getClassCheck();
-		int[] classScore = newStudent.getClassScore();
+	}
+	public void All() {
+		for (Student student : students) {
+			printStudentInform(student);
+		}
+	}
+	
+	public void printStudentInform(Student student){
+		System.out.println("학번 : " + student.getStudentNumber());
+		System.out.println("이름 : " + student.getName());
+		System.out.println("전화번호 : " + student.getPhoneNumber());
+		System.out.println("메모 : " + student.getMemo());
+		System.out.println("▶▶ 현재 수강중인 과목과 성적 >>> ");
+		boolean[] classCheck = student.getClassCheck();
+		int[] classScore = student.getClassScore();
 		for (int i = 0; i < classCheck.length; i++) {
 			if (classCheck[i]) {
-				System.out.println("과목명 : " + className[i] + 
+				System.out.println("과목명 : " + Student.getClassName()[i] + 
 								  " / 성적 : " + classScore[i]);
 			}
 		}
 	}
-	static void All() {
-		for (Student student : students) {
-			System.out.println("학번 : " + student.getStudentNumber());
-			System.out.println("이름 : " + student.getName());
-			System.out.println("전화번호 : " + student.getPhoneNumber());
-			System.out.println("메모 : " + student.getMemo());
-			System.out.println("현재 수강중인 과목과 성적 >>> ");
-			boolean[] classCheck = student.getClassCheck();
-			int[] classScore = student.getClassScore();
-			for (int i = 0; i < classCheck.length; i++) {
-				if (classCheck[i]) {
-					System.out.println("과목명 : " + className[i] + 
-									" / 성적 : " + classScore[i]);
-				}
-			}
-		}
+	// ============== 학번 입력 
+	public int stn() {
+		System.out.print("학생의 학번을 입력하세요 >>> ");
+		int studentNumber = input.nextInt(); // 학번을 입력받음
+		return studentNumber;
 	}
+	
 }
