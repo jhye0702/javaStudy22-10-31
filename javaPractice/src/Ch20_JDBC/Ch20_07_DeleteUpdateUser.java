@@ -31,7 +31,7 @@ class DBDelete extends DBSelect {
 	}
 }
 
-public class Ch20_07DeleteUpdateUser {
+public class Ch20_07_DeleteUpdateUser {
 	public static void main(String[] args) throws SQLException {
 		DBDelete myDB = new DBDelete();
 		myDB.connectDB();

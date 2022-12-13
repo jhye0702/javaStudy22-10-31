@@ -24,7 +24,8 @@ class DB{
 	// Connection : Statement, PreparedStatement, CallableStatement 구현 객체를 생성하며
 	//				트랜잭션Transaction 처리 및 DB 연결을 끊을 때 사용.
 	Connection conn = null;
-	// PreparedStatement: 차이점은 매개변수화된 SQL문을 사용할 수 있기 때문에 편리성이나 보안성이 좋음.
+	// PreparedStatement: statement를 상속받는 인터페이스로 SQL구문을 실행시키는 기능을 갖는 객체.
+	//					   차이점은 매개변수화된 SQL문을 사용할 수 있기 때문에 편리성이나 보안성이 좋음.
 	//					-> SQL문을 미리 만들어 두고 변수를 따로 입력하는 방식
 	//						효율성이나 유지 보수 측면에서 유리.
 	//						그래서 Statement(주로 변경되지 않는 정적 SQL문 실행에 사용)보다는
@@ -54,7 +55,8 @@ class DB{
 			}
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로드 실패");
-			e.printStackTrace();
+			e.printStackTrace(); //  printStackTrace : 예외발생 당시의 호출스택(Call Stack)에 있었던 메소드의 정보와 예외 메시지를 화면에 출력
+								 // 예외 메시지(ex. by zero)와 예외난 곳(ex. TryEx12.java:8)을 알려주며
 		} catch (SQLException e) {
 			System.out.println("DB 접속 실패");
 			e.printStackTrace();
