@@ -234,5 +234,8 @@ public class StudentManage {
 		int studentNumber = input.nextInt(); // 학번을 입력받음
 		return studentNumber;
 	}
+
+
+
 	
 }

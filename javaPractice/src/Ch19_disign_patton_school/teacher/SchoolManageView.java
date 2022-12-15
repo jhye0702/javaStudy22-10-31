@@ -2,8 +2,6 @@ package Ch19_disign_patton_school.teacher;
 
 import java.util.Scanner;
 
-import Ch19_disign_patton_school.copy.StudentManage;
-
 public class SchoolManageView {
 	public static void main(String[] args) {
 		
