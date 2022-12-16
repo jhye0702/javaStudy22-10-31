@@ -119,11 +119,15 @@ public class SchoolManage {
 		int studentNumber = input.nextInt(); // 학번 입력받음
 		System.out.println();
 		
-		Student newStudent = findStudentInform(studentNumber);
-		if(newStudent == null) { // 만약 기존에 학생의 정보가 없다면
-			System.out.println("Error : 학생이 존재하지 않습니다 !");
-			System.out.println();
-			return; // 메소드 종료
+//		Student newStudent = findStudentInform(studentNumber);
+//		if(newStudent == null) { // 만약 기존에 학생의 정보가 없다면
+//			System.out.println("Error : 학생이 존재하지 않습니다 !");
+//			System.out.println();
+//			return; // 메소드 종료
+//		}
+		
+		if (!studentDAO.isStudent(studentNumber)) {
+			System.out.println("Error : 학생이 존재하지 않습니다.");
 		}
 		
 		while(true) {
@@ -145,7 +149,11 @@ public class SchoolManage {
 	}
 	public void setClass(String message, Student student, boolean check) {
 		System.out.println(message);
-		System.out.print(printClass()); // 1. JAVA / 2. PYTHON 이런거 뜨도록?
+		ArrayList<Subject> subjects = subjectDAO.selectAll();
+		for(Subject s : subjects) {
+			System.out.println(s.getCode() + "." + s.getSubjectName() + "/ ");
+		}
+		System.out.println(); 
 		int index = input.nextInt()	- 1;
 		// 수강신청이면 map에 저장, 수강 취소면 map 삭제
 		if (check) {
